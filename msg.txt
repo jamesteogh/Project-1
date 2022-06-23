@@ -1,0 +1,6 @@
+https://twelvedata.com/
+https://www.yahoofinanceapi.com/
+Tradingview Rest API
+
+twelvedata API key
+03123b25aa2f4028818b13c9ea66f3a2
