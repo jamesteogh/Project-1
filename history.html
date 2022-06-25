@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <title>Portfolio Tracker</title>
+</head>
+
+<body>
+  <nav id="page-header" class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+        <figure class="mr-3">
+            <!-- <img src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo@2x.png 2x" /> -->
+            <figcaption><a class="navbar-brand" href="#">Portfolio Tracker</a></figcaption>
+        </figure>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="positions.html">Positions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="history.html">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="breakdown.html">Breakdown</a>
+                </li>
+            </ul>
+        </div>       
+    </div>
+ </nav>
+    <form id="search-everything" class="row g-3 background">
+<!-- Ticker input -->
+      <div class="col-md-3 background">
+        <label for="search-term" class="form-label">Stock Ticker:</label>
+        <input type="text" class="form-control is-valid" id="ticker-input" name="search-term" value="" placeholder="eg. GOOGL" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+<!-- Action input -->
+      <div class="input-group mb-2">
+        <label for="validationServer02" class="form-label">Action:</label>
+        <select class="form-select" id="inputGroupSelect02">
+          <option selected>Choose...</option>
+          <option value="1">Buy</option>
+          <option value="2">Sell</option>
+          <option value="3">Dividend</option>
+          <option value="3">Deposit</option>
+          <option value="3">Withdrawal</option>
+        </select>       
+      </div>
+<!-- Price input -->
+      <div class="col-md-2">
+        <label for="validationServer02" class="form-label">Price (USD):</label>
+        <input type="number" class="form-control is-valid" id="price-input" value="$" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+<!-- Quantity input -->
+      <div class="col-md-2">
+        <label for="validationServer02" class="form-label">Quantity:</label>
+        <input type="number" class="form-control is-valid" id="quantity" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+<!-- Date input -->
+      <div class="col-md-3">
+        <label for="validationServer02" class="form-label">Date:</label>
+        <input type="date" class="form-control is-valid" id="date-input" value="" required>
+      </div>
+<!-- Button to input stock transaction  -->
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Input Stock Transaction</button>
+      </div>
+    </form>
+    <h2>Stocks Transactions</h2>
+    <!-- render stock -->
+    <div class="stock-container">
+    </div>
+<!-- table -->
+    <table class="table table-striped">
+      <thead>
+        <tr class = "table-success">
+          <th scope="col">Date</th>
+          <th scope="col">Security</th>
+          <th scope="col">Action</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+          <th scope="col">Current Price</th>
+        </tr>
+      </thead>
+      <tbody class = "tabledata">
+        <!-- <tr>
+          <th scope="row">Date1</th>
+          <td>Security1</td>
+          <td>Action1</td>
+          <td>Quantity1</td>
+          <td>Price1</td>
+          <td>Total1</td>
+          <td>CurrentPrice1</td>
+        </tr>
+        <tr>
+          <th scope="row">Date2</th>
+          <td>Security2</td>
+          <td>Action2</td>
+          <td>Quantity2</td>
+          <td>Price2</td>
+          <td>Total2</td>
+          <td>CurrentPrice2</td>
+        </tr> -->
+
+      </tbody>
+    </table>
+    
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
