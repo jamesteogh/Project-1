@@ -14,7 +14,7 @@ To download this Portfolio Tracker, you can paste this command into your command
 
 or you can use paste this github links pages into your browser
 
-	https://
+	https://jamesteogh.github.io/Project-1/
 
 ### BUILT WITH 
 --------------------
