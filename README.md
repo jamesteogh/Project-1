@@ -40,12 +40,12 @@ or you can use paste this github links pages into your browser
 1. Using Dom to manipulate user inputs into table format.
 2. Usage of local storage for user inputs, to be used on other pages.
 3. Algo calculation to allow portfolio dashboard and positions to pan out. 
-4. How to use make use of excel functionality in html pages. 
+4. How to make use of excel functionality in html pages. 
 
 ### THINGS TO IMPROVE ON IF I HAD MORE TIME
 ----------------------
 
-1. UI and UX improvement to make it more user friendly
+1. UI and UX improvement to make the website more user friendly
 2. Better styling and structuring
 3. Cleaner code
 4. USE API for more financial information with regards to the stock
