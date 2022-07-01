@@ -31,35 +31,35 @@ const fetchData = async(ticker) => {
     }
 }
 
-// append stock ticker and current price using div
-// const renderStock = (data) => { 
-//     const divEl = document.createElement("div")
-//     const stockTicker = data.meta.symbol 
-//     const currentPrice = data.values[0].close // last closed price of stock
-//     divEl.innerHTML = stockTicker + " " + "$" + parseFloat(currentPrice) 
-//     stockContainerEl.appendChild(divEl)
-// }
-// get data and return stock current price
-
-// append price and date using div
-const renderData = (priceInput, dateInput) => {
-    const divEl = document.createElement("div")
-    divEl.innerHTML = "$" + priceInput + " " + dateInput
-    stockContainerEl.appendChild(divEl)    
-}
-
 const rowData = (dateInput, tickerInput, selectInput, quantityInput, priceInput, currentPrice) => {
-    const createTr = document.createElement("tr")
-    createTr.classList.add("trInner")
-    createTr.innerHTML = '<th scope="row" class = "rowth"></th>' 
-    stockTableEl.append(createTr)
-    document.querySelector(".rowth").innerHTML = dateInput
+    const tableElement = document.querySelector("table")
+    
+    const rowElement = document.createElement("tr")
+    
+    const dateElement = document.createElement("td")
+    dateElement.innerHTML = dateInput
 
-    const createTd = document.createElement("td")
-    createTd.innerHTML = tickerInput.toUpperCase() // Append Stock Ticker into the table
-    document.querySelector(".trInner").appendChild(createTd)
-    createTd.innerHTML = currentPrice // Append action Buy, Sell etc   
-    document.querySelector(".trInner").appendChild(createTd)
+    const securityElement = document.createElement("td")
+    securityElement.innerHTML = tickerInput
+
+    const actionElement = document.createElement("td")
+    actionElement.innerHTML = selectInput
+
+    const quantityElement = document.createElement("td")
+    quantityElement.innerHTML = quantityInput
+
+    const priceElement = document.createElement("td")
+    priceElement.innerHTML = "$" + priceInput
+
+    const totalElement = document.createElement("td")
+    totalElement.innerHTML = "$" + (priceInput * quantityInput)
+
+    const currentpriceElement = document.createElement("td")
+    currentpriceElement.innerHTML = "$" + currentPrice
+
+    rowElement.append(dateElement, securityElement, actionElement, quantityElement, priceElement, totalElement, currentpriceElement)
+
+    tableElement.append(rowElement)
 }
 
 formEl.addEventListener("submit", formSubmitted)

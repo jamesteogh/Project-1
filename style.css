@@ -1,3 +1,20 @@
-.background {
-  background-color: #E3FDFD;
+form {
+  margin: 25px 30px 0px 30px;
+  padding: 20px;
+  background-color: #DFF6FF;
+
+}
+
+.stock-transaction {
+  background-color: #DFF6FF;
+  padding: 20px;
+  color: black;
+}
+
+h2 {
+  background-color: #DFF6FF;
+}
+
+.navbar-brand {
+  font-size: 50px;
 }

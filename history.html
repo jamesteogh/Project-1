@@ -10,11 +10,10 @@
     <title>Portfolio Tracker</title>
 </head>
 
-<body>
-  <nav id="page-header" class="navbar navbar-expand-lg bg-light">
-    <div class="container">
-        <figure class="mr-3">
-            <!-- <img src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo@2x.png 2x" /> -->
+<body class="container-fluid">
+  <nav id="page-header" class="navbar navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+        <figure class="mr-2">
             <figcaption><a class="navbar-brand" href="#">Portfolio Tracker</a></figcaption>
         </figure>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +38,7 @@
         </div>       
     </div>
  </nav>
+ <h2>History</h2>
     <form id="search-everything" class="row g-3 background">
 <!-- Ticker input -->
       <div class="col-md-3 background">
@@ -86,14 +86,16 @@
         <button class="btn btn-primary" type="submit">Input Stock Transaction</button>
       </div>
     </form>
-    <h2>Stocks Transactions</h2>
+    <div class = "stock-transaction">
+      <h4>Stocks Transactions</h4>
+    </div>
 <!-- render stock -->
     <div class="stock-container">
     </div>
 <!-- table -->
     <table class="table table-striped">
       <thead>
-        <tr class = "table-success">
+        <tr class = "table-primary">
           <th scope="col">Date</th>
           <th scope="col">Security</th>
           <th scope="col">Action</th>
